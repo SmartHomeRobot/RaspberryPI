@@ -17,3 +17,8 @@ wpa-psk "password"
 
 2.输入sudo ifup wlan0重新启动无线网卡
 3.Static IP
+4.scan
+#扫描热点
+wpa_cli scan
+#把扫描结果输出到标准输出中
+wpa_cli scan_result
