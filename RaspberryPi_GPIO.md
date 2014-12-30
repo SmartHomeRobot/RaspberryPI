@@ -81,6 +81,21 @@
 ## 4.3 webiopi
 
 ### 4.3.1 download weboipi
+### 4.3.2 SFTP
+sftp 是一个交互式文件传输程式。它类似于 ftp, 但它进行加密传输，比FTP有更高的安全性。下边就简单介绍一下如何远程连接主机，进行文件的上传和下载，以及一些相关操作。
+举例，如远程主机的 IP 是 202.206.64.33或者是域名www.hebust.edu.cn,用户名是  fyt ,在命令行模式下:sftp fyt@202.206.64.33或者  fyt@www.hebust.edu.cn。回车提示输入密码。进入提示符
+sftp>
+
+如果登陆远程机器不是为了上传下载文件，而是要修改远程主机上的某些文件。可以
+ssh  fyt@202.206.64.33 （其实sftp就是ssh 的一个程式。）
+sftp> get /var/www/fuyatao/index.php  /home/fuyatao/
+这条语句将从远程主机的  /var/www/fuyatao/目录下将 index.php 下载到本地  /home/fuyatao/目录下。
+sftp> put /home/fuyatao/downloads/Linuxgl.pdf /var/www/fuyatao/
+这条语句将把本地 /home/fuyatao/downloads/目录下的 linuxgl.pdf文件上传至远程主机/var/www/fuyatao/ 目录下。
+你如果不知道远程主机的目录是什么样， pwd命令可以帮您查询远程主机的当前路径。查询本机当前工作目录 lpwd.
+改变路径可以用cd ，改变本机路径可以用 lcd;
+ls rm rmdir mkdir 这些命令都可以使用。同理调用本机都是加 l , 即 lls lrm.
+要离开sftp，用exit 或quit、 bye 均可。详细情况可以查阅 man  sftp.
 ### 4.3.2 install weboipi
 
 $ tar xvzf WebIOPi-x.y.z.tar.gz  
