@@ -80,3 +80,12 @@
 
 ## 4.3 webiopi
 
+### 4.3.1 download weboipi
+### 4.3.2 install weboipi
+
+$ tar xvzf WebIOPi-x.y.z.tar.gz  
+$ cd WebIOPi-x.y.z  
+$ sudo ./setup.sh
+
+### 4.3.3 
+
