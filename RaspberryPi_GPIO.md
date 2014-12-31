@@ -101,5 +101,10 @@ $ tar xvzf WebIOPi-0.7.0.tar.gz
 $ cd WebIOPi-0.7.0  
 $ sudo ./setup.sh
 
-### 4.3.3 
+### 4.3.4 
 
+After WebIOPi successfully installed
+* To start WebIOPi foreground   : sudo webiopi [-h] [-c config] [-l log] [-s script] [-d] [port]
+* To start WebIOPi background   : sudo /etc/init.d/webiopi start
+* To start WebIOPi at boot      : sudo update-rc.d webiopi defaults
+* Look in /home/pi/dev/RPI/WebIOPi-0.7.0/examples for Python library usage examples
