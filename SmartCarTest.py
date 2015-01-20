@@ -57,7 +57,7 @@ def turn_right():
 
 def loop():
     while True:
-    	forward()
+        forward()
 	time.sleep(1)
 	backward()
 	time.sleep(1)
